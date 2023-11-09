@@ -1,0 +1,188 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --color-primary:#f6d200;
+    --color-grey:#ededed;
+    --color-dark:#000;
+    --color-white:#fff;
+
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,300;0,400;0,700;0,900;1,300&display=swap');
+
+body{
+    background-color: var(--color-grey);
+    color: var(--color-dark);
+    line-height: 1.5;
+    font-family: 'Asap', sans-serif;
+    
+    
+
+}
+
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.header{
+    background-color:var(--color-dark);
+    color: var(--color-white);
+    height: 400px;
+}
+
+.navbar{
+    background-color:var(--color-primary);
+
+}
+.site-info{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.navbar ul li a:link ,
+.navbar ul li a:visited {
+    text-transform: capitalize;
+    background-color: var(--color-primary);
+    color:var(--color-dark) ;
+    transition: all .4s ease-in-out;
+    
+   
+}
+a {
+    display: flex;
+    text-decoration: none;
+    justify-content: center;
+    padding: 6px;
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--color-dark);
+}
+
+.navbar a:hover,
+.navbar a:focus,
+.navbar a:active{
+    background-color: var(--color-dark);
+    color: var(--color-primary);
+}
+
+
+
+
+
+.content-area{
+    flex-direction: column;
+}
+
+.main-content-area{
+    /*border: 2px solid pink;*/
+    padding: 10px;
+}
+
+.sidebar-section{
+    border: 1px solid purple;
+}
+
+
+/* css of posts section */ 
+
+.posts{
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+article.post {
+    background-color: var(--color-white);
+    margin-bottom: 20px;
+}
+.post img{
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+.post-content {
+    transform: translateY(-10px);
+}
+.post-content h2 {
+    padding: 20px;
+    text-align: center;
+    background-color: var(--color-primary);
+    text-transform: capitalize;
+    color: var(--color-dark);
+}
+
+.post-content p{
+    padding: 25px;
+    color: var(--color-dark);
+}
+
+/* css of watch-cards section */
+
+.watch-card {
+    background-color: var(--color-dark);
+    color: var(--color-white);
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.watch-img > img {
+    width: 100%;
+}
+
+
+@media all and (min-width:768px) {
+    .posts{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media all and (min-width:1180px) {
+    .navbar ul{
+        display: flex;
+    }
+    .navbar li {
+        flex-grow:1;
+    }
+    .content-area, .posts{
+        flex-direction: row;
+    }
+    /*.posts{
+        flex-direction: row;
+    }*/
+    .main-content-area{
+        flex-grow: 1;
+    }
+    .sidebar-section{
+       
+        flex:0 0 400px; /* flex-basis:400px; */
+        
+    }
+    .navbar {
+        justify-content: center;
+        justify-content: space-between;
+        display: flex;
+        background-color: var(--color-primary);
+ }
+}
